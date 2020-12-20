@@ -1,0 +1,34 @@
+Animales:
+    type: entity
+    table: animales
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        tipo:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        color:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        raza:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
+# php bin/console doctrine:mapping:convert --from-database yml ./src/Entity
+# Esta linea es para traer la entidad from database and convert it in Entidad

@@ -1,0 +1,34 @@
+{% extends "layouts/master.html.twig" %}
+
+{% block titulo %}Titlo nuevo{% endblock %}
+{% block cabecera %}
+    {# Este metodo parent hereda lo que ya tiene la plantiilla #}
+    {# {{ parent() }} #}
+    <h1>Cabecera nueva</h1>
+    <hr><br>
+{% endblock %}
+
+{% block contenido %}
+    
+    {% set var = 'Estos es una variable' %}
+    <h3>
+    hola {{ name ~'-'~ apellidos}}
+    </h3>
+    <h1>{{ var }}</h1>
+    {{ dump(animales) }}
+    {# dump es como vardump de php #}
+    <br>
+    {{ animales[0] }}    
+    <br>
+    <br>
+    {{ dump(jugador) }}
+    {{ jugador.nombre }}
+
+{# if, ifb           {% if condition %} ... {% endif %}
+ife               {% if condition %} ... {% else %} ... {% endif %}
+for               {% for item in seq %} ... {% endfor %}
+fore              {% for item in seq %} ... {% else %} ... {% endfor %} #}
+
+
+
+{% endblock %}

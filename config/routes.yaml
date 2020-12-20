@@ -1,0 +1,14 @@
+index:
+   path: /index
+   controller: App\Controller\HomeController::index
+
+# defaults, es como algo por defecto
+# requirements, validar los parametros
+
+parametros:
+   path: /parametros/{nombre}/{apellidos?}
+   controller: App\Controller\HomeController::parametros
+   defaults: { apellidos: 'Nova Arevalo'}
+   methods: GET
+   requirements:
+    nombre: '[a-zA-Z ]+'
